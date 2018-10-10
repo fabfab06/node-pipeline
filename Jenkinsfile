@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("fduband/myrepo")
+        app = docker.build(env.dockerhub)
     }
 
     stage('Test image') {
