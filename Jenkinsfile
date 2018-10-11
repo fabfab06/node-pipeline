@@ -19,6 +19,8 @@ node {
          * For this example, we're using a Volkswagen-type approach ;-) */
 
         app.inside {
+			sh 'java -version'
+			sh 'mvn -version'
             sh 'echo "Tests passed"'
         }
     }
