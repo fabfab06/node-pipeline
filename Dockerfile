@@ -1,8 +1,10 @@
 # use a node base image
 FROM node:7-onbuild
 
-# set maintainer
-LABEL maintainer "miiro@getintodevops.com"
+# installing Maven
+RUN apt-get update -y && apt-get install maven -y
+
+
 
 # set a health check
 HEALTHCHECK --interval=5s \
